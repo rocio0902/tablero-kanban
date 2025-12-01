@@ -1,0 +1,65 @@
+/* Estilos Generales */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos del Tablero Kanban */
+.kanban-board {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+}
+
+.kanban-column {
+    background-color: #e8e8e8;
+    min-width: 300px; /* Ancho de la columna */
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.column-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Estilos de las Tarjetas (Tareas) */
+.kanban-card {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    cursor: grab; /* Indica que es arrastrable */
+}
+
+/* Estilo para cuando una tarjeta está siendo arrastrada */
+.is-dragging {
+    opacity: 0.5;
+    border: 2px dashed #333;
+}
+
+/* Estilo para donde la tarjeta se puede soltar */
+.kanban-column:hover,
+.kanban-column.drag-over {
+    background-color: #ddd;
+}
+
+/* Estilos del Modal (no incluido aquí por simplicidad, pero puedes agregarlos) */
+.modal { display: none; /* Oculto por defecto */ }
